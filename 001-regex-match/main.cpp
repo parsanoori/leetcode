@@ -4,28 +4,9 @@
 using namespace std;
 
 class Solution {
-    vector<vector<int> > dp;
+    vector<vector<bool> > dp;
     int n, m;
     string str, pat;
-
-    bool _isMatch(int i, int j) {
-        if (j == 0) {
-            return i == 0;
-        }
-
-
-        bool isStar = pat[j - 1] == '*';
-        if (i > 0) {
-            if (isStar) {
-                if (pat[j - 2] == str[i - 1] || pat[j - 2] == '.')
-                    return _isMatch(i - 1, j) || _isMatch(i, j - 2); // read or not
-                else return _isMatch(i, j - 2);
-            } else {
-                return (pat[j - 1] == str[i - 1] || pat[j - 1] == '.') && _isMatch(i - 1, j - 1);
-            }
-        }
-        return isStar && _isMatch(i, j - 2);
-    }
 
     void print2dArr(vector<vector<int> > arr) {
         for (auto tarr: arr) {
@@ -43,7 +24,24 @@ public:
         str = s;
         pat = p;
 
-        return _isMatch(n, m);
+        dp = vector(n + 1, vector(m + 1, false));
+        dp[0][0] = true;
+        for (int i = 0; i <= n; i++) {
+            for (int j = 1; j <= m; j++) {
+                if (i == 0 && j == 0)
+                    dp[i][j] = true;
+
+                if (i == 0) {
+                    dp[i][j] = pat[j - 1] == '*' && dp[i][j - 2];
+                }
+
+                dp[i][j] =
+                        pat[j - 1] == '*' && (pat[j - 2] == '.' || pat[j - 2] == str[i - 1]) && dp[i - 1][j] ||
+                        pat[j - 1] == '*' && dp[i][j - 2] ||
+                        (pat[j - 1] == '.' || pat[j - 1] == str[i - 1]) && dp[i - 1][j - 1];
+            }
+        }
+        return dp[n][m];
     }
 };
 
