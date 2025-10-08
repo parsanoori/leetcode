@@ -18,12 +18,9 @@ Example:
 
 ```
 .
-├── 001-two-sum/
-│   ├── v1.cpp
-│   ├── v2.cpp
-│   └── CMakeLists.txt
-├── 002-add-two-numbers/
-│   ├── v1.cpp
+├── 001-regex-dp/
+│   ├── v1-forward-dp.cpp
+│   ├── v2-backward-dp.cpp
 │   └── CMakeLists.txt
 └── README.md
 ```
