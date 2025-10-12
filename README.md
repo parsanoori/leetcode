@@ -52,11 +52,19 @@ g++ -std=c++17 v1.cpp -o main && ./main
 
 ## 🗓️ Progress Tracker
 
-| Difficulty | Solved | In Progress | Total |
-| ---------- | ------ | ----------- | ----- |
-| Easy       | —      | —           | —     |
-| Medium     | —      | 1           | -     |
-| Hard       | —      | —           | 1     |
+| Difficulty | Solved |
+| ---------- | ------ |
+| Easy       | —      |
+| Medium     | 1      |
+| Hard       | 1      |
+
+## 🗓️ Progress Tracker
+
+| Toplic         | Solved |
+| -------------- | ------ |
+| Easy           | 0      |
+| DP             | 1      |
+| Two-Pointers   | 1      |
 
 *(This table will be updated as I make progress.)*
 
