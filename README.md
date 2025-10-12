@@ -55,7 +55,7 @@ g++ -std=c++17 v1.cpp -o main && ./main
 | Difficulty | Solved | In Progress | Total |
 | ---------- | ------ | ----------- | ----- |
 | Easy       | —      | —           | —     |
-| Medium     | —      | —           | —     |
+| Medium     | —      | 1           | -     |
 | Hard       | —      | —           | 1     |
 
 *(This table will be updated as I make progress.)*
