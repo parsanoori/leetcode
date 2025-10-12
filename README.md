@@ -8,10 +8,10 @@ I’m documenting my **LeetCode** journey here — to track progress, stay consi
 
 The structure of this repository is simple and organized:
 
-* Each problem has its own folder named after the question ID and title (e.g., `001-two-sum/`).
+* Each problem has its own folder named after the question ID and title (e.g., `001-regex-match/`).
 * Each folder contains:
 
-  * One or more `.cpp` solution files (e.g., `v1.cpp`, `v2.cpp`).
+  * One or more `.cpp` solution files (e.g., `v1-forward-memoize.cpp`, `v2-backward-recursion.cpp`).
   * A dedicated `CMakeLists.txt` file for building that problem individually.
 
 Example:
@@ -19,8 +19,9 @@ Example:
 ```
 .
 ├── 001-regex-dp/
-│   ├── v1-forward-dp.cpp
-│   ├── v2-backward-dp.cpp
+│   ├── v1-forward-memoize.cpp
+│   ├── v2-backward-recursion.cpp
+│   ├── v3-forward-dp.cpp
 │   └── CMakeLists.txt
 └── README.md
 ```
@@ -32,7 +33,7 @@ Example:
 Each folder can be built independently using **CMake**:
 
 ```
-cd 001-two-sum
+cd 001-regex-match
 mkdir build && cd build
 cmake ..
 make
@@ -55,7 +56,7 @@ g++ -std=c++17 v1.cpp -o main && ./main
 | ---------- | ------ | ----------- | ----- |
 | Easy       | —      | —           | —     |
 | Medium     | —      | —           | —     |
-| Hard       | —      | —           | —     |
+| Hard       | —      | —           | 1     |
 
 *(This table will be updated as I make progress.)*
 
